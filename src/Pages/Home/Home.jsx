@@ -1,14 +1,18 @@
 import React from 'react';
 import Banner from '../../components/Banner/Banner';
 import Chef from '../../components/Chef/Chef';
-import Client from '../../components/Client/Client';
+import Food from '../../components/Food/Food';
+import Latest from '../../components/Latest/Latest';
+import Footer from '../../Shared/Footer/Footer';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
             <Chef></Chef>
-            <Client></Client>
+            <Food></Food>
+            <Latest></Latest>
+            <Footer></Footer>
         </div>
     );
 };

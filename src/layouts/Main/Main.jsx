@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 const Main = () => {
     return (
-        <div className='lg:px-28 mt-6'>
+        <div>
             <NavigationBar></NavigationBar>
             <Outlet></Outlet>
         </div>

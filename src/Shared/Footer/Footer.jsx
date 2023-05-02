@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className='border p-14'>
                     <h1 className='text-2xl font-bold text-white mb-4'>Subscribe</h1>
                     <p className='text-gray-400'>Register and get notified al the news & updates before it gets too late.</p>
-                    <div className='flex gap-2'>
+                    <div className='flex gap-2 mt-2'>
                         <input className='bg-gray-700 rounded-lg text-gray-500 px-3 py-3' placeholder='Your Email Address' type="text" name="text" id="" />
                         <Link className='bg-yellow-500 text-white font-semibold px-4 py-2 rounded-lg' to='/sign-up'>Sign up</Link>
                     </div>
@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
             <div className='flex text-gray-400 justify-between p-5 bg-gray-800'>
                 <p>All Rights Reserved. Your company name here.</p>
-                <div className='flex gap-2 text-3xl'>
+                <div className='flex gap-5 text-4xl'>
                     <FaFacebookSquare />
                     <FaTwitterSquare />
                     <FaInstagramSquare />

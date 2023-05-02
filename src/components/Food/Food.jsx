@@ -2,8 +2,8 @@ import React from 'react';
 
 const Food = () => {
     return (
-        <div className='mt-10'>
-            <h2 className='text-5xl font-semibold text-center'>Food <span className='text-yellow-500'>List</span>!!!</h2>
+        <div className='lg:mt-24 mt-10 lg:px-36 px-6'>
+            <h2 className='text-5xl font-semibold text-center mb-10'>Hot <span className='text-yellow-500'>Items</span>!!!</h2>
             <div className='lg:flex gap-5'>
                 <div className='relative mt-10'>
                     <img className='w-96 hover:translate-x-3 transition-transform rounded-full opacity-50' src="https://images.unsplash.com/photo-1604634077373-a279cadc62c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" />

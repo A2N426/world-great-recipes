@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className='lg:flex items-center gap-10 mt-10'>
+        <div className='lg:flex lg:px-36 items-center gap-10 mt-10'>
             <div className='lg:w-[50%] lg:px-0 px-6'>
                 <h1 className='text-5xl mb-1'>African <span className='text-yellow-500'>Super</span> Food</h1>
                 <h3 className='text-3xl mb-2'>8+ Chef Details Here</h3>

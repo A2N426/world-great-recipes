@@ -21,7 +21,7 @@ const NavigationBar = () => {
                     &&
                     <div className='relative group flex'>
                         <img className='w-10 rounded-full' src={user ? user.photoURL : <FaUser />} alt="Not Found" />
-                        <span class="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 
+                        <span className="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 
                         -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto">{user?.displayName}</span>
                     </div>
                 }

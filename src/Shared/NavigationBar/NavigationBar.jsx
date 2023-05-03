@@ -13,7 +13,7 @@ const NavigationBar = () => {
             <div>
                 <h2 className='text-3xl font-semibold lg:text-start text-center'><span className='text-yellow-400 hover:text-yellow-300'>Fat</span> Chef</h2>
             </div>
-            <div className='flex lg:mx-0 mx-7 gap-8 font-semibold items-center'>
+            <div className={`flex lg:mx-0 lg:mt-0 mt-5 gap-8 font-semibold items-center ${user ? "mx-10" : "mx-20"}`}>
                 <Link to='/'>Home</Link>
                 <Link to='/blog'>Blog</Link>
                 {

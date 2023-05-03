@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Recipes = ({ recipe }) => {
-    const { img, method, name, rating, spices } = recipe
-    console.log(recipe)
+    const { img, method, name, rating, spices } = recipe;
+    const [active,setActive]=useState(false)
+    const handleFavorite = (event)=> {
+        toast("Favorite List Added");
+        const disabled = event.currentTarget.disabled = true;
+        setActive(disabled)
+    }
+
     return (
         <div className='border border-red-600 p-5 rounded-md'>
                 <img className='rounded-lg' src={img} alt="" />
@@ -12,7 +19,7 @@ const Recipes = ({ recipe }) => {
                     <p className='text-xl font-bold text-yellow-400'>Cooking Method</p>
                     {spices?.map((spice, index) => <li key={index} className='font-semibold'>{spice}</li>)}
                 </div>
-                <button className='bg-yellow-400 hover:bg-yellow-300 w-full p-2 font-semibold text-white rounded-lg mt-3'>Favorite</button>
+                <button onClick={handleFavorite} className={`bg-yellow-400 w-full p-2 font-semibold hover:bg-yellow-300 text-white rounded-lg mt-3 ${active && 'bg-yellow-200 hover:bg-yellow-200'}`}>Favorite</button>
         </div>
     );
 };

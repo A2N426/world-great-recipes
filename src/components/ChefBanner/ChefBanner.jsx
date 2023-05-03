@@ -12,8 +12,8 @@ const ChefBanner = ({ chef }) => {
                 <div>
                     <h1 className='text-4xl text-yellow-400 hover:text-yellow-300 font-bold'>{name}</h1>
                     <p className='mt-3 text-xl'>{description}</p>
-                    <p className='text-xl mt-2 mb-2'><span className='font-semibold'>Number of Recipes:</span> {quantity}</p>
-                    <p className='text-xl'><span className='text-xl font-semibold'>Likes:</span> {likes}</p>
+                    <p className='text-xl mt-2 mb-2'><span className='font-semibold'>Number of Recipes:</span> {quantity} Items</p>
+                    <p className='text-xl mb-2'><span className='text-xl font-semibold'>Likes:</span> {likes}</p>
                     <p className='text-xl'><span className='font-semibold text-xl'>experience:</span> {experience}</p>
                 </div>
             </div>

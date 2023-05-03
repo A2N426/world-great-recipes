@@ -11,7 +11,7 @@ const ChefCard = ({ chef }) => {
             <p>Number Of Recipes: {quantity}</p>
             <p>Likes:{likes}</p>
             <Link to={`/view/${id}`}>
-                <button className='bg-yellow-400 hover:bg-yellow-300 mt-2 w-full py-3 rounded-lg font-semibold'>View Recipes</button>
+                <button className='bg-yellow-400 hover:bg-yellow-300 text-white mt-2 w-full py-3 rounded-lg font-semibold'>View Recipes</button>
             </Link>
         </div>
     );

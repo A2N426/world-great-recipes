@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaTwitter,FaGithub } from 'react-icons/fa';
 
 const Login = () => {
 
@@ -40,9 +41,10 @@ const Login = () => {
                                 <Link to='/sign-up' className="font-semibold leading-6 text-yellow-400 hover:text-yellow-300"> Please sign up</Link>
                             </p>
                             <p className='text-center font-semibold'>Or Continue with</p>
-                            <div className='flex gap-3'>
-                                <button className='bg-cyan-500 px-9 py-2 rounded-xl font-semibold hover:bg-cyan-400 w-[50%] text-white'>Twitter</button>
-                                <button className='bg-gray-700 w-[50%] py-2 rounded-xl font-semibold text-white hover:bg-gray-600'>Github</button>
+                            <div className='flex lg:gap-4 justify-between'>
+                                <button className='bg-cyan-500 py-2 rounded-xl font-semibold hover:bg-cyan-400 lg:px-14 px-10 items-center gap-2 text-white flex'><FaTwitter className='text-xl'/> Twitter</button>
+                                <button className='bg-gray-700 lg:px-14
+                                px-10 py-2 flex rounded-xl font-semibold text-white hover:bg-gray-600 items-center gap-2'><FaGithub className='text-xl'/> Github</button>
                             </div>
                         </form>
                     </div>

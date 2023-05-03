@@ -1,19 +1,15 @@
-import React from 'react';
-import Banner from '../../components/Banner/Banner';
-import Chef from '../../components/Chef/Chef';
-import Food from '../../components/Food/Food';
-import Latest from '../../components/Latest/Latest';
-import Footer from '../../Shared/Footer/Footer';
+import React, { Suspense, lazy } from 'react';
+const App = lazy(() => import('../../App'))
+
 
 const Home = () => {
+    <div className='text-2xl mt-5 font-semibold'>Please Wait...</div>
     return (
-        <div>
-            <Banner></Banner>
-            <Chef></Chef>
-            <Food></Food>
-            <Latest></Latest>
-            <Footer></Footer>
-        </div>
+        <>
+            <Suspense fallback={<div className='text-3xl mt-10'>Please Wait...</div>}>
+                <App></App>
+            </Suspense>
+        </>
     );
 };
 

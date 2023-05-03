@@ -1,12 +1,10 @@
 import {  createBrowserRouter } from 'react-router-dom'
-import LoginLayout from '../layouts/LoginLayout.jsx/LoginLayout'
 import Main from '../layouts/Main/Main'
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
 import SignUp from '../Pages/SignUp/SignUp';
 import Details from '../Pages/Details/Details';
 import DetailsLayout from '../layouts/DetailsLayout/DetailsLayout';
-import ChefBanner from '../components/ChefBanner/ChefBanner';
 import PrivateRoute from './PrivateRoute';
 import Error from '../Pages/Error/Error';
 import Blog from '../Pages/Blog/Blog';

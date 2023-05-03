@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import NavigationBar from '../../Shared/NavigationBar/NavigationBar';
-import { Outlet } from 'react-router-dom';
-import Home from '../../Pages/Home/Home';
+const Home = lazy(() => import('../../Pages/Home/Home'))
 
 const Main = () => {
     return (
         <div>
-            <NavigationBar></NavigationBar>
-            <Outlet></Outlet>
+            <Suspense fallback={<div className='text-2xl mt-5 font-semibold'>Please Wait...</div>}>
+                <NavigationBar></NavigationBar>
+                <Home></Home>
+            </Suspense>
         </div>
     );
 };

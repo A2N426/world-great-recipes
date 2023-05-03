@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const Recipes = ({ recipe }) => {
     const { img, method, name, rating, spices } = recipe;
-    const [active,setActive]=useState(false)
+    const [active,setActive]=useState(null)
     const handleFavorite = (event)=> {
         toast("Favorite List Added");
         const disabled = event.currentTarget.disabled = true;
@@ -15,11 +17,12 @@ const Recipes = ({ recipe }) => {
                 <img className='rounded-lg' src={img} alt="" />
                 <h1 className='text-2xl text-yellow-400 mt-2 font-semibold mb-3'>{name}</h1>
                 <p className='font-semibold'>{method}</p>
-                <div>
+                <div className='mb-1'>
                     <p className='text-xl font-bold text-yellow-400'>Cooking Method</p>
                     {spices?.map((spice, index) => <li key={index} className='font-semibold'>{spice}</li>)}
                 </div>
-                <button onClick={handleFavorite} className={`bg-yellow-400 w-full p-2 font-semibold hover:bg-yellow-300 text-white rounded-lg mt-3 ${active && 'bg-yellow-200 hover:bg-yellow-200'}`}>Favorite</button>
+                <p className='text-xl gap-2 flex'>Ratings:  <Rating style={{ maxWidth: 150 }} value={rating} readOnly /></p>
+                <button onClick={handleFavorite} className={`w-full p-2 font-semibold text-white rounded-lg mt-3 ${active ? 'bg-yellow-200' : "bg-yellow-400 hover:bg-yellow-300"}`}>Favorite</button>
         </div>
     );
 };

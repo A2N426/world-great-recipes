@@ -11,7 +11,8 @@ const NavigationBar = () => {
                 <Link to='/'>Home</Link>
                 <Link to='/blog'>Blog</Link>
                 <Link>User</Link>
-                <button className='bg-yellow-400 px-6 py-2 rounded-md'>login</button>
+                <Link to='/login' className='bg-yellow-400 px-6 py-2 rounded-md'>login</Link>
+                <Link to='/sign-up' className='bg-yellow-400 px-6 py-2 rounded-md'>sign up</Link>
             </div>
         </div>
     );

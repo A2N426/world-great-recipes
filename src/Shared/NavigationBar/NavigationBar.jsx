@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { UserContext } from '../../Providers/AuthProviders';
 import { FaUser } from 'react-icons/fa';
 
@@ -14,8 +14,8 @@ const NavigationBar = () => {
                 <h2 className='text-3xl font-semibold lg:text-start text-center'><span className='text-yellow-400 hover:text-yellow-300'>Fat</span> Chef</h2>
             </div>
             <div className={`flex lg:mx-0 lg:mt-0 mt-5 gap-8 font-semibold items-center ${user ? "mx-10" : "mx-20"}`}>
-                <Link to='/'>Home</Link>
-                <Link to='/blog'>Blog</Link>
+                <NavLink className="hover:text-yellow-400"  to='/'>Home</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? 'text-yellow-400 font-medium tracking-wide transition-colors duration-200' : 'hover:text-yellow-400')} to='/blog'>Blog</NavLink>
                 {
                     user
                     &&

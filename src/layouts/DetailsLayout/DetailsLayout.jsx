@@ -9,7 +9,7 @@ const DetailsLayout = () => {
         <div>
             <NavigationBar></NavigationBar>
             <Outlet></Outlet>
-            {/* <Footer></Footer> */}
+            <Footer></Footer>
         </div>
     );
 };

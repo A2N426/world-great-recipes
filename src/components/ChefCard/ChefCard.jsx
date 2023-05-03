@@ -9,7 +9,7 @@ const ChefCard = ({ chef }) => {
             <p>{experience}</p>
             <p>Number Of Recipes: {quantity}</p>
             <p>Likes:{likes}</p>
-            <button className='bg-yellow-500 w-full py-3 rounded-lg font-semibold mt-2'>View Recipes</button>
+            <button className='bg-yellow-400 hover:bg-yellow-300 w-full py-3 rounded-lg font-semibold mt-2'>View Recipes</button>
         </div>
     );
 };

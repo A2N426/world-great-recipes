@@ -17,12 +17,12 @@ const SignUp = () => {
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-        const confirm = form.confirm.value;
-        console.log(name, photo, email, password, confirm)
-        if (password !== confirm) {
-            setError("Password Not Matched")
+
+        if(!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
+            setError("Please Provide a valid email")
             return;
         }
+
         if (password.length < 6) {
             setError("Password Must 6 Character longer")
             return;
@@ -33,11 +33,12 @@ const SignUp = () => {
                 const createdUser = result.user;
                 setSuccess("Account Successfully Created")
                 changeProfile(result.user, name, photo)
+                form.reset()
                 console.log(createdUser)
             })
             .catch(error => {
                 console.log(error.message)
-                // setError(error.message)
+                setError(error.message)
             })
 
 
@@ -78,20 +79,10 @@ const SignUp = () => {
                             <div className="mt-2">
                                 <input id="password" name="password" type="password" autoComplete="current-password" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-400 sm:text-sm sm:leading-6" />
                             </div>
-                            <p><small className='text-red-600'>{error}</small></p>
                         </div>
-                        <div>
-                            <div className="flex items-center justify-between">
-                                <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">Confirmed Password</label>
-                            </div>
-                            <div className="mt-2">
-                                <input id="confirm" name="confirm" type="password" autoComplete="confirm-password" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-400 sm:text-sm sm:leading-6" />
-                            </div>
-                            <p><small className='text-red-600'>{error}</small></p>
-                        </div>
-
                         <div>
                             <p className='text-center text-green-600'>{success}</p>
+                            <p><small className='text-center text-red-600'>{error}</small></p>
                             <button type="submit" className="flex w-full justify-center rounded-md bg-yellow-400 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-yellow-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400">Sign up</button>
                         </div>
                         <p className="mt-10 text-center text-sm text-gray-500">

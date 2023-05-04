@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
-import { FaTwitter, FaGithub } from 'react-icons/fa';
+import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { UserContext } from '../../Providers/AuthProviders';
 
 const Login = () => {
@@ -78,7 +78,8 @@ const Login = () => {
                         </form>
                         <p className='text-center mb-3 mt-1 font-semibold'>Or Continue with</p>
                         <div className='flex lg:gap-4 justify-between'>
-                            <button onClick={handleGoogle} className='bg-cyan-500 py-2 rounded-xl font-semibold hover:bg-cyan-400 lg:px-14 px-10 items-center gap-2 text-white flex'><FaTwitter className='text-xl' /> Twitter</button>
+                            <button onClick={handleGoogle} className='py-2 bg-blue-500 hover:bg-blue-400 text-white rounded-xl font-semibold lg:px-14 px-10 items-center gap-2 flex'><FaGoogle className='text-xl' /> 
+                            Google</button>
                             <button onClick={handleGitHub} className='bg-gray-700 lg:px-14
                                 px-10 py-2 flex rounded-xl font-semibold text-white hover:bg-gray-600 items-center gap-2'><FaGithub className='text-xl' /> Github</button>
                         </div>

@@ -1,4 +1,4 @@
-## Live Link : 
+## Live Link : https://chef-recipes-hunter.web.app/
 
 ## welcome to app details
 

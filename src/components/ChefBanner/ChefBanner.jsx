@@ -1,6 +1,7 @@
 import React from 'react';
 import Recipes from '../Recipes/Recipes';
 import { Link } from 'react-router-dom';
+import { FaArrowRight, FaThumbsUp } from 'react-icons/fa';
 
 const ChefBanner = ({ chef }) => {
     const { name, img, experience, description, quantity, likes, id, recipes } = chef;
@@ -10,17 +11,20 @@ const ChefBanner = ({ chef }) => {
                 <div>
                     <img className='rounded-xl' src={img} alt="" />
                 </div>
-                <div>
-                    <h1 className='text-4xl text-yellow-400 hover:text-yellow-300 font-bold'>{name}</h1>
+                <div className='lg:text-start text-center'>
+                    <h1 className='text-4xl text-yellow-400 hover:text-yellow-300 font-bold lg:mt-0 mt-10'>{name}</h1>
                     <p className='mt-3 text-xl'>{description}</p>
                     <p className='text-xl mt-2 mb-2'><span className='font-semibold'>Number of Recipes:</span> {quantity} Items</p>
-                    <p className='text-xl mb-2'><span className='text-xl font-semibold'>Likes:</span> {likes}</p>
                     <p className='text-xl'><span className='font-semibold text-xl'>experience:</span> {experience}</p>
+                    <div className='flex lg:mb-2 mb-10 lg:justify-normal justify-center items-center mt-2'>
+                        <button className='px-6 py-1 rounded-2xl mr-3 flex gap-1 items-center font-semibold bg-yellow-400 hover:bg-yellow-300 text-white'><FaThumbsUp className='mb-1' />Like</button>
+                        <p className='text-xl'>5000 Likes</p>
+                    </div>
                 </div>
             </div>
             <div className='lg:grid lg:mt-24 gap-5 grid-cols-3'>
                 {
-                    recipes.map((recipe,index)=><Recipes
+                    recipes.map((recipe, index) => <Recipes
                         key={index}
                         recipe={recipe}
                         chef={chef}
@@ -28,7 +32,9 @@ const ChefBanner = ({ chef }) => {
                 }
             </div>
             <Link to='/favorite'>
-                <button className='bg-yellow-400 hover:bg-yellow-300 px-6 py-2 rounded-lg font-semibold text-white '>My Favorite</button>
+                <div className='flex justify-end'>
+                    <button className='bg-yellow-400 mt-4  hover:bg-yellow-300 px-6 flex items-center gap-2 py-2 rounded-lg font-semibold text-white '>My Favorite<FaArrowRight></FaArrowRight> </button>
+                </div>
             </Link>
         </div>
     );

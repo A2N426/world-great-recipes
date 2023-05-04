@@ -13,7 +13,7 @@ const NavigationBar = () => {
             <Link to='/'>
                 <h2 className='text-3xl font-semibold lg:text-start text-center'><span className='text-yellow-400 hover:text-yellow-300'>Fat</span> Chef</h2>
             </Link>
-            <div className={`flex lg:mx-0 lg:mt-0 mt-5 gap-8 font-semibold items-center ${user ? "mx-10" : "mx-20"}`}>
+            <div className={`flex lg:mx-0 lg:mt-0 mt-5 lg:gap-8 gap-6 font-semibold items-center ${user ? "mx-0" : "mx-10"}`}>
                 <NavLink className="hover:text-yellow-400" to='/'>Home</NavLink>
                 <NavLink className={({ isActive }) => (isActive ? 'text-yellow-400 font-bold tracking-wide transition-colors duration-200' : 'hover:text-yellow-400')} to='/blog'>Blog</NavLink>
                 <NavLink className={({ isActive }) => (isActive ? 'text-yellow-400 font-bold tracking-wide transition-colors duration-200' : 'hover:text-yellow-400')} to='/about'>About</NavLink>
@@ -30,9 +30,9 @@ const NavigationBar = () => {
                 }
                 {
                     user ?
-                        <Link onClick={handleLogOut} className='bg-yellow-400 px-6 py-2 text-white rounded-md hover:bg-yellow-300'>Log out</Link>
+                        <Link onClick={handleLogOut} className='bg-yellow-400 lg:px-6 px-4 py-2 text-white rounded-md hover:bg-yellow-300'>Log out</Link>
                         :
-                        <Link to='/login' className='bg-yellow-400 text-white px-6 py-2 rounded-md hover:bg-yellow-300'>login</Link>
+                        <Link to='/login' className='bg-yellow-400 text-white lg:px-8 px-6 py-2 rounded-md hover:bg-yellow-300'>login</Link>
 
                 }
             </div>

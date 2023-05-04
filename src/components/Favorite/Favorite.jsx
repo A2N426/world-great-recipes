@@ -1,13 +1,22 @@
 import React from 'react';
+import { Toaster,toast } from 'react-hot-toast';
 
-const Favorite = ({favorite}) => {
-    const {name,recipes}=favorite
+const Favorite = ({ favorite }) => {
+    const { img, method, name, recipes, rating, spices } = favorite;
+    const handleRemove = ()=>{
+        toast("Remove From Favorite")
+    }
     return (
-        <div>
-            <h2>{name}</h2>
+        <div className='border lg:border-none rounded-lg border-red-600 p-5'>
+            <h2 className='text-4xl font-bold text-center mb-5'>{name}</h2>
             {
-            recipes.map(recipe=><img src={recipe.img} alt="" />)
+                recipes.map((single,index) => <div key={index} className='border px-4 rounded-xl border-red-600 mb-3'>
+                    <h1 className='text-center font-semibold text-2xl mt-3'>{single.name}</h1>
+                    <img className='w-[50%] mx-auto rounded-xl mb-5' src={single.img} alt="" />
+                </div>)
             }
+            <button onClick={handleRemove} className='bg-yellow-400 hover:bg-yellow-300 w-full text-white py-3 rounded-lg font-semibold'>Remove From Favorite</button>
+            <Toaster />
         </div>
     );
 };

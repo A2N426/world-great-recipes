@@ -14,13 +14,16 @@ const NavigationBar = () => {
                 <h2 className='text-3xl font-semibold lg:text-start text-center'><span className='text-yellow-400 hover:text-yellow-300'>Fat</span> Chef</h2>
             </Link>
             <div className={`flex lg:mx-0 lg:mt-0 mt-5 gap-8 font-semibold items-center ${user ? "mx-10" : "mx-20"}`}>
-                <NavLink className="hover:text-yellow-400"  to='/'>Home</NavLink>
-                <NavLink className={({ isActive }) => (isActive ? 'text-yellow-400 font-medium tracking-wide transition-colors duration-200' : 'hover:text-yellow-400')} to='/blog'>Blog</NavLink>
+                <NavLink className="hover:text-yellow-400" to='/'>Home</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? 'text-yellow-400 font-bold tracking-wide transition-colors duration-200' : 'hover:text-yellow-400')} to='/blog'>Blog</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? 'text-yellow-400 font-bold tracking-wide transition-colors duration-200' : 'hover:text-yellow-400')} to='/about'>About</NavLink>
                 {
                     user
                     &&
                     <div className='relative group lg:flex'>
-                        <img className='w-14  rounded-full' src={user && user.photoURL} alt="Not Found" />
+                        <Link to='/user'>
+                            <img className='w-14  rounded-full' src={user && user.photoURL} alt="Not Found" />
+                        </Link>
                         <span className="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 
                         -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto">{user?.displayName}</span>
                     </div>

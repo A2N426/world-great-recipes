@@ -9,6 +9,10 @@ import PrivateRoute from './PrivateRoute';
 import Error from '../Pages/Error/Error';
 import Blog from '../Pages/Blog/Blog';
 import LoginLayout from '../layouts/LoginLayout.jsx/LoginLayout';
+import FavoriteRecipes from '../Pages/FavoriteRecipes/FavoriteRecipes';
+import { UserContext } from '../Providers/AuthProviders';
+import UserInfo from '../Pages/UserInfo/UserInfo';
+import About from '../Pages/About/About';
 
 const router = createBrowserRouter([
     {
@@ -31,6 +35,14 @@ const router = createBrowserRouter([
             {
                 path:'blog',
                 element:<Blog></Blog>
+            },
+            {
+                path:'/user',
+                element:<UserInfo></UserInfo>
+            },
+            {
+                path:'/about',
+                element:<About></About>
             }
         ]
     },
@@ -44,6 +56,10 @@ const router = createBrowserRouter([
                 loader:({params})=>fetch(`https://chef-recipes-hunter-server-a2n426.vercel.app/data/${params.id}`)
             }
         ]
+    },
+    {
+        path:'/favorite',
+        element:<FavoriteRecipes></FavoriteRecipes>
     }
 ])
 

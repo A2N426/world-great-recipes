@@ -2,7 +2,7 @@ import React from 'react';
 
 const Food = () => {
     return (
-        <div className='lg:mt-24 divide-y divide-red-600 mt-10 lg:px-36 px-6'>
+        <div className='lg:mt-24 divide-y-4 divide-red-600 mt-10 lg:px-36 px-6'>
             <div className='text-center'>
                 <h2 className='text-5xl font-semibold '>Hot <span className='text-yellow-400'>Items</span>!!!</h2>
                 <small className='italic text-red-700'>Exclusive Hot Items</small>

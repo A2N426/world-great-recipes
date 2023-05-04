@@ -1,5 +1,6 @@
 import React from 'react';
 import Recipes from '../Recipes/Recipes';
+import { Link } from 'react-router-dom';
 
 const ChefBanner = ({ chef }) => {
     const { name, img, experience, description, quantity, likes, id, recipes } = chef;
@@ -22,9 +23,13 @@ const ChefBanner = ({ chef }) => {
                     recipes.map((recipe,index)=><Recipes
                         key={index}
                         recipe={recipe}
+                        chef={chef}
                     ></Recipes>)
                 }
             </div>
+            <Link to='/favorite'>
+                <button className='bg-yellow-400 hover:bg-yellow-300 px-6 py-2 rounded-lg font-semibold text-white '>My Favorite</button>
+            </Link>
         </div>
     );
 };

@@ -7,7 +7,7 @@ const Latest = () => {
                 <h3 className='text-5xl font-semibold text-center'>Latest <span className='text-yellow-400 hover:text-yellow-300'>Recipes</span>
                 </h3>
                 <h1 className='text-center text-red-700 italic mt-3'>Testy Fy food</h1>
-                <div className='lg:grid mt-10 grid-cols-3 gap-5'>
+                <div className='grid mt-10 lg:grid-cols-3 gap-5'>
                     <div className='border border-red-600 p-2 rounded-lg'>
                         <img className='w-full rounded-lg' src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
                         <div className='px-5 mt-3 mb-5'>

@@ -10,17 +10,17 @@ const NavigationBar = () => {
     }
     return (
         <div className='lg:flex bg-gray-100 p-4 rounded-md lg:px-36 justify-between items-center'>
-            <div>
+            <Link to='/'>
                 <h2 className='text-3xl font-semibold lg:text-start text-center'><span className='text-yellow-400 hover:text-yellow-300'>Fat</span> Chef</h2>
-            </div>
+            </Link>
             <div className={`flex lg:mx-0 lg:mt-0 mt-5 gap-8 font-semibold items-center ${user ? "mx-10" : "mx-20"}`}>
                 <NavLink className="hover:text-yellow-400"  to='/'>Home</NavLink>
                 <NavLink className={({ isActive }) => (isActive ? 'text-yellow-400 font-medium tracking-wide transition-colors duration-200' : 'hover:text-yellow-400')} to='/blog'>Blog</NavLink>
                 {
                     user
                     &&
-                    <div className='relative group flex'>
-                        <img className='w-10 rounded-full' src={user ? user.photoURL : <FaUser />} alt="Not Found" />
+                    <div className='relative group lg:flex'>
+                        <img className='w-14  rounded-full' src={user && user.photoURL} alt="Not Found" />
                         <span className="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 
                         -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto">{user?.displayName}</span>
                     </div>

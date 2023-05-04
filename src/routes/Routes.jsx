@@ -8,11 +8,12 @@ import DetailsLayout from '../layouts/DetailsLayout/DetailsLayout';
 import PrivateRoute from './PrivateRoute';
 import Error from '../Pages/Error/Error';
 import Blog from '../Pages/Blog/Blog';
+import LoginLayout from '../layouts/LoginLayout.jsx/LoginLayout';
 
 const router = createBrowserRouter([
     {
         path:'/',
-        element:<Main></Main>,
+        element:<LoginLayout></LoginLayout>,
         errorElement:<Error></Error>,
         children:[
             {

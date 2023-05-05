@@ -1,9 +1,10 @@
 import React, { Suspense, lazy } from 'react';
 import Banner from '../../components/Banner/Banner';
-// import Chef from '../../components/Chef/Chef'
 import Food from '../../components/Food/Food';
 import Latest from '../../components/Latest/Latest';
 const Chef = lazy(() => import('../../components/Chef/Chef'))
+
+
 
 const Home = () => {
 

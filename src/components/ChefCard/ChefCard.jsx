@@ -1,12 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaThumbsUp } from 'react-icons/fa';
+import LazyLoad from 'react-lazy-load';
 
 const ChefCard = ({ chef }) => {
     const { name, img, experience, quantity, likes, id } = chef;
     return (
         <div className='border border-red-600 rounded-xl font-semibold p-4 mt-8'>
-            <img className='mx-auto w-full  h-56 rounded-xl' src={img} alt="" />
+            <LazyLoad
+                width={290} 
+                threshold={0.95}
+                onContentVisible={() => { }}
+            >
+                <img className='mx-auto w-full  h-56 rounded-xl' src={img} alt="" />
+            </LazyLoad>
             <h3 className='text-2xl mt-2 font-semibold'>{name}</h3>
             <p className='mt-2'>experience: {experience}</p>
             <p>Number Of Recipes: {quantity}</p>

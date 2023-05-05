@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
-import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { UserContext } from '../../Providers/AuthProviders';
 
 const Login = () => {
     const [error,setError]=useState("")
     const [success,setSuccess]=useState("")
-    const { logIn, googleLogIn, gitHubLogIn, } = useContext(UserContext)
+    const [email,setEmail]=useState("")
+    const { logIn, googleLogIn, gitHubLogIn } = useContext(UserContext)
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from.pathname || '/';
@@ -50,7 +51,7 @@ const Login = () => {
                             <div>
                                 <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">Email address</label>
                                 <div className="mt-2">
-                                    <input id="email" name="email" type="email" autoComplete="email" required className="block w-full rounded-md border-0 py-1.5 text-yellow-700 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-400 sm:text-sm sm:leading-6" />
+                                    <input id="email" name="email" type="email" autoComplete="email" required className="block w-full rounded-md border-0 px-3 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6" />
                                 </div>
                             </div>
 
@@ -58,11 +59,11 @@ const Login = () => {
                                 <div className="flex items-center justify-between">
                                     <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">Password</label>
                                     <div className="text-sm">
-                                        <a href="#" className="font-semibold text-yellow-800 hover:text-yellow-700">Forgot password?</a>
+                                        <button href="#" className="font-semibold text-yellow-800 hover:text-yellow-700">Forgot password?</button>
                                     </div>
                                 </div>
                                 <div className="mt-2">
-                                    <input id="password" name="password" type="password" autoComplete="current-password" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-700 sm:text-sm sm:leading-6" />
+                                    <input id="password" name="password" type="password" autoComplete="current-password" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset px-3 ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6" />
                                 </div>
                                 <p><small className='text-red-600'>{error}</small></p>
                                 <p><small className='text-green-600'>{success}</small></p>
@@ -73,7 +74,7 @@ const Login = () => {
                             </div>
                             <p className="mt-10 text-center text-sm text-gray-500">
                                 Don't Have an account?
-                                <Link to='/sign-up' className="font-semibold leading-6 text-yellow-800 hover:text-yellow-700"> Please sign up</Link>
+                                <Link to='/sign-up' className="font-semibold leading-6 text-yellow-800 underline hover:text-yellow-700"> Please sign up</Link>
                             </p>
                         </form>
                         <p className='text-center mb-3 mt-1 font-semibold'>Or Continue with</p>

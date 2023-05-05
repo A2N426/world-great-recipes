@@ -46,7 +46,7 @@ const NavigationBar = ( ) => {
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <NavLink className="hover:text-yellow-600" to='/'>Home</NavLink>
                         <NavLink className={({ isActive }) => (isActive ? 'text-yellow-800 font-bold tracking-wide transition-colors duration-200' : 'hover:text-yellow-700')} to='/blog'>Blog</NavLink>
-                        <NavLink to='/about'>About</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? 'text-yellow-800 font-bold tracking-wide transition-colors duration-200' : 'hover:text-yellow-700')} to='/about'>About</NavLink>
                     </ul>
                 </div>
                 <div className='lg:mx-0 mx-2'>
@@ -56,7 +56,7 @@ const NavigationBar = ( ) => {
             <div className="navbar-center hidden lg:flex gap-10 font-semibold">
                 <NavLink className="hover:text-white text-lg btn btn-ghost normal-case" to='/'>Home</NavLink>
                 <NavLink className={({ isActive }) => (isActive ? 'text-yellow-800 hover:text-white btn btn-ghost normal-case text-xl font-bold tracking-wide transition-colors duration-200' : 'hover:text-yellow-700 text-lg')} to='/blog'>Blog</NavLink>
-                <NavLink className={({ isActive }) => (isActive ? 'text-yellow-800 font-bold tracking-wide transition-colors duration-200 hover:text-white text-lg btn btn-ghost normal-case' : 'hover:text-yellow-700 text-lg')} to='/about'>About</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? 'text-yellow-800 hover:text-white btn btn-ghost normal-case text-xl font-bold tracking-wide transition-colors duration-200' : 'hover:text-yellow-700 text-lg')} to='/about'>About</NavLink>
             </div>
             <div className="navbar-end flex lg:gap-3 gap-10">
                 <div>
@@ -74,9 +74,9 @@ const NavigationBar = ( ) => {
                 </div>
                 {
                     user ?
-                        <Link onClick={handleLogOut} className='bg-yellow-800 lg:px-6 px-4 py-2 text-white rounded-md hover:bg-yellow-700'>Log out</Link>
+                        <Link onClick={handleLogOut} className='bg-yellow-800 lg:px-6 px-4 py-2 text-white rounded-md font-semibold hover:bg-yellow-700'>Log out</Link>
                         :
-                        <Link to='/login' className='bg-yellow-800 text-white lg:px-10 px-4 py-2 rounded-md hover:bg-yellow-700'>login</Link>
+                        <Link to='/login' className='bg-yellow-800 text-white lg:px-10 font-semibold px-4 py-2 rounded-md hover:bg-yellow-700'>login</Link>
 
                 }
             </div>

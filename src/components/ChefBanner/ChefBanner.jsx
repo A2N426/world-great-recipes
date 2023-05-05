@@ -14,11 +14,14 @@ const ChefBanner = ({ chef }) => {
                 <div className='lg:text-start text-center'>
                     <h1 className='text-4xl text-yellow-800 hover:text-yellow-700 font-bold lg:mt-0 mt-10'>{name}</h1>
                     <p className='mt-3 text-xl'>{description}</p>
-                    <p className='text-xl mt-2 mb-2'><span className='font-semibold'>Number of Recipes:</span> {quantity} Items</p>
-                    <p className='text-xl'><span className='font-semibold text-xl'>experience:</span> {experience}</p>
-                    <div className='flex lg:mb-2 mb-10 lg:justify-normal justify-center items-center mt-2'>
-                        <button className='px-6 py-1 rounded-2xl mr-3 flex gap-1 items-center font-semibold bg-yellow-800 hover:bg-yellow-700 text-white'><FaThumbsUp className='mb-1' />Like</button>
-                        <p className='text-xl'>5000 Likes</p>
+                    <div className='text-start border border-red-600 p-4 rounded-lg mt-2'>
+                        <h2 className='text-2xl font-semibold'>Additional Information</h2>
+                        <p className='text-xl mt-2 mb-2'><span className='font-semibold'>Number of Recipes:</span> {quantity} Items</p>
+                        <p className='text-xl'><span className='font-semibold text-xl'>experience:</span> {experience}</p>
+                        <div className='flex lg:mb-2 mb-10 lg:justify-normal items-center mt-2'>
+                            <button className='px-6 py-1 rounded-2xl mr-3 flex gap-1 items-center font-semibold bg-yellow-800 hover:bg-yellow-700 text-white'><FaThumbsUp className='mb-1' />Like</button>
+                            <p className='text-xl'>5000 Likes</p>
+                        </div>
                     </div>
                 </div>
             </div>

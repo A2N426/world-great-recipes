@@ -46,7 +46,7 @@ const NavigationBar = ( ) => {
                 </div>
                 {
                     user ?
-                        <Link onClick={handleLogOut} className='bg-yellow-800 lg:px-6 px-4 py-2 text-white rounded-md font-semibold hover:bg-yellow-700'>Log out</Link>
+                        <Link onClick={handleLogOut} className='bg-yellow-800 lg:px-6 px-3 py-3 text-white rounded-md font-semibold hover:bg-yellow-700'>Log out</Link>
                         :
                         <Link to='/login' className='bg-yellow-800 text-white lg:px-10 font-semibold px-4 py-2 rounded-md hover:bg-yellow-700'>login</Link>
 

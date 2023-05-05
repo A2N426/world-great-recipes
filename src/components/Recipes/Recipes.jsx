@@ -27,7 +27,7 @@ const Recipes = ({ recipe, chef }) => {
     }
 
     return (
-        <div className='border border-red-600 p-5 rounded-md'>
+        <div className='border mt-5 lg:mt-0 border-red-600 p-5 rounded-md'>
             <img className='rounded-lg' src={img} alt="" />
             <h1 className='text-2xl text-yellow-800 mt-2 font-semibold mb-3'>{name}</h1>
             <p className='font-semibold'>{method}</p>

@@ -6,7 +6,6 @@ import { UserContext } from '../../Providers/AuthProviders';
 const Login = () => {
     const [error,setError]=useState("")
     const [success,setSuccess]=useState("")
-    const [email,setEmail]=useState("")
     const { logIn, googleLogIn, gitHubLogIn } = useContext(UserContext)
     const navigate = useNavigate()
     const location = useLocation()
@@ -34,9 +33,21 @@ const Login = () => {
 
     const handleGoogle = ()=>{
         googleLogIn()
+        .then(result=>{
+            navigate(from,{replace:true})
+        })
+        .catch(error=>{
+            setError("Anything wrong your Google account")
+        })
     }
     const handleGitHub = ()=>{
         gitHubLogIn()
+        .then(result=>{
+            navigate(from,{replace:true})
+        })
+        .catch(error=>{
+            setError("Anything wrong your Github account")
+        })
     }
     return (
         <div>

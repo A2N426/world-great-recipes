@@ -9,34 +9,6 @@ const NavigationBar = ( ) => {
     }
 
     return (
-        // <div className='lg:flex bg-gray-100 p-4 rounded-md lg:px-36 justify-between items-center'>
-        //     <Link to='/'>
-        //         <h2 className='text-3xl font-semibold lg:text-start text-center'><span className='text-yellow-600 hover:text-yellow-300'>Fat</span> Chef</h2>
-        //     </Link>
-        //     <div className={`flex lg:mx-0 lg:mt-0 mt-5 lg:gap-8 gap-6 font-semibold items-center ${user ? "mx-0" : "mx-10"}`}>
-        //         <NavLink className="hover:text-yellow-600" to='/'>Home</NavLink>
-        //         <NavLink className={({ isActive }) => (isActive ? 'text-yellow-600 font-bold tracking-wide transition-colors duration-200' : 'hover:text-yellow-600')} to='/blog'>Blog</NavLink>
-        //         <NavLink className={({ isActive }) => (isActive ? 'text-yellow-600 font-bold tracking-wide transition-colors duration-200' : 'hover:text-yellow-600')} to='/about'>About</NavLink>
-        // {
-        //     user
-        //     &&
-        //     <div className='relative group lg:flex'>
-        //         <Link to='/user'>
-        //             <img className='w-14  rounded-full' src={user?.photoURL} alt="Not Found" />
-        //         </Link>
-        //         <span className="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 
-        //         -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto">{user?.displayName}</span>
-        //     </div>
-        // }
-        // {
-        //     user ?
-        //         <Link onClick={handleLogOut} className='bg-yellow-800 lg:px-6 px-4 py-2 text-white rounded-md hover:bg-yellow-300'>Log out</Link>
-        //         :
-        //         <Link to='/login' className='bg-yellow-800 text-white lg:px-8 px-6 py-2 rounded-md hover:bg-yellow-300'>login</Link>
-
-        // }
-        //     </div>
-        // </div >
         <div className="navbar lg:flex bg-gray-100 p-4 rounded-md lg:px-36 justify-between items-center">
             <div className="navbar-start">
                 <div className="dropdown">

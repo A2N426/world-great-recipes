@@ -31,14 +31,15 @@ const AuthProviders = ({ children }) => {
     }
 
     const logOut = ()=>{
-        signOut(auth)
+        return signOut(auth)
     }
 
-    const changeProfile = (user, name, photo) => {
-        updateProfile(user, {
+    const changeProfile = ( currentUser, name, photo) => {
+         updateProfile(currentUser, {
             displayName: name,
             photoURL: photo
         })
+        console.log(currentUser)
     }
 
     useEffect( ()=>{

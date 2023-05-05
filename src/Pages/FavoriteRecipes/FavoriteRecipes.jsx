@@ -13,7 +13,7 @@ const FavoriteRecipes = () => {
         <>
             <NavigationBar />
             <div >
-                <h2 className='text-4xl mt-10 font-bold text-center'>Your <span className='text-yellow-400 hover:text-yellow-300'>Favorite Recipes</span> Here</h2>
+                <h2 className='text-4xl mt-10 font-bold text-center'>Your <span className='text-yellow-800 hover:text-yellow-700'>Favorite Recipes</span> Here</h2>
             </div>
             <div className='lg:px-36'>
                 {

@@ -8,8 +8,5 @@ module.exports = withMT({
     extend: {},
   },
   plugins: [require("daisyui")],
-  plugins: [
-    require('flowbite/plugin')
-  ],
 });
 

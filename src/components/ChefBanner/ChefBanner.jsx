@@ -12,12 +12,12 @@ const ChefBanner = ({ chef }) => {
                     <img className='rounded-xl' src={img} alt="" />
                 </div>
                 <div className='lg:text-start text-center'>
-                    <h1 className='text-4xl text-yellow-400 hover:text-yellow-300 font-bold lg:mt-0 mt-10'>{name}</h1>
+                    <h1 className='text-4xl text-yellow-800 hover:text-yellow-700 font-bold lg:mt-0 mt-10'>{name}</h1>
                     <p className='mt-3 text-xl'>{description}</p>
                     <p className='text-xl mt-2 mb-2'><span className='font-semibold'>Number of Recipes:</span> {quantity} Items</p>
                     <p className='text-xl'><span className='font-semibold text-xl'>experience:</span> {experience}</p>
                     <div className='flex lg:mb-2 mb-10 lg:justify-normal justify-center items-center mt-2'>
-                        <button className='px-6 py-1 rounded-2xl mr-3 flex gap-1 items-center font-semibold bg-yellow-400 hover:bg-yellow-300 text-white'><FaThumbsUp className='mb-1' />Like</button>
+                        <button className='px-6 py-1 rounded-2xl mr-3 flex gap-1 items-center font-semibold bg-yellow-800 hover:bg-yellow-700 text-white'><FaThumbsUp className='mb-1' />Like</button>
                         <p className='text-xl'>5000 Likes</p>
                     </div>
                 </div>
@@ -33,7 +33,7 @@ const ChefBanner = ({ chef }) => {
             </div>
             <Link to='/favorite'>
                 <div className='flex justify-end'>
-                    <button className='bg-yellow-400 mt-4  hover:bg-yellow-300 px-6 flex items-center gap-2 py-2 rounded-lg font-semibold text-white '>My Favorite<FaArrowRight></FaArrowRight> </button>
+                    <button className='bg-yellow-800 mt-4  hover:bg-yellow-700 px-6 flex items-center gap-2 py-2 rounded-lg font-semibold text-white '>My Favorite<FaArrowRight></FaArrowRight> </button>
                 </div>
             </Link>
         </div>

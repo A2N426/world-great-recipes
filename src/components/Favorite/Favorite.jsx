@@ -15,7 +15,7 @@ const Favorite = ({ favorite }) => {
                     <img className='w-[50%] mx-auto rounded-xl mb-5' src={single.img} alt="" />
                 </div>)
             }
-            <button onClick={handleRemove} className='bg-yellow-400 hover:bg-yellow-300 w-full text-white py-3 rounded-lg font-semibold'>Remove From Favorite</button>
+            <button onClick={handleRemove} className='bg-yellow-800 hover:bg-yellow-700 w-full text-white py-3 rounded-lg font-semibold'>Remove From Favorite</button>
             <Toaster />
         </div>
     );

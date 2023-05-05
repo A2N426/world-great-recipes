@@ -14,7 +14,7 @@ const Blog = () => {
             <div>
                 <div>
                     <div className='lg:px-36 px-6'>
-                        <h1 className='text-center mt-10 text-4xl font-bold text-yellow-400'>Questions Sections</h1>
+                        <h1 className='text-center mt-10 text-4xl font-bold text-yellow-600'>Questions Sections</h1>
                         <div>
                             <div className='mt-8 border border-red-600 p-5 rounded-xl'>
                                 <h1 className='text-3xl font-semibold mb-2'>1. Tell us the differences between uncontrolled and controlled components?</h1>

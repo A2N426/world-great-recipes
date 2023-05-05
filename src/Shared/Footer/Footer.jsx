@@ -11,7 +11,7 @@ const Footer = () => {
                     <p className='text-gray-400'>Register and get notified al the news & updates before it gets too late.</p>
                     <div className='flex gap-2 mt-2'>
                         <input className='bg-gray-700 rounded-lg text-gray-500 px-4 py-3' placeholder='Your Email Address' type="text" name="text" id="" />
-                        <Link className='bg-yellow-400 hover:bg-yellow-300 text-white font-semibold px-4 py-3 rounded-lg' to='/sign-up'>Sign up</Link>
+                        <Link className='bg-yellow-900 hover:bg-yellow-700 text-white font-semibold px-4 py-3 rounded-lg' to='/sign-up'>Sign up</Link>
                     </div>
                 </div>
                 <div className='p-14 border'>

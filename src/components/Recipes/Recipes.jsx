@@ -29,14 +29,14 @@ const Recipes = ({ recipe, chef }) => {
     return (
         <div className='border border-red-600 p-5 rounded-md'>
             <img className='rounded-lg' src={img} alt="" />
-            <h1 className='text-2xl text-yellow-400 mt-2 font-semibold mb-3'>{name}</h1>
+            <h1 className='text-2xl text-yellow-800 mt-2 font-semibold mb-3'>{name}</h1>
             <p className='font-semibold'>{method}</p>
             <div className='mb-1'>
-                <p className='text-xl font-bold text-yellow-400'>Cooking Method</p>
+                <p className='text-xl font-bold text-yellow-800'>Cooking Method</p>
                 {spices?.map((spice, index) => <li key={index} className='font-semibold'>{spice}</li>)}
             </div>
             <p className='text-xl gap-2 flex'>Ratings:  <Rating style={{ maxWidth: 150 }} value={rating} readOnly /></p>
-            <button onClick={handleFavorite} className={`w-full p-2 font-semibold text-white rounded-lg mt-3 ${active ? 'bg-yellow-100' : "bg-yellow-400 hover:bg-yellow-300"}`}>Favorite</button>
+            <button onClick={handleFavorite} className={`w-full p-2 font-semibold text-white rounded-lg mt-3 ${active ? 'bg-yellow-400' : "bg-yellow-800 hover:bg-yellow-700"}`}>Favorite</button>
         </div>
     );
 };

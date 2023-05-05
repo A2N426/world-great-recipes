@@ -11,11 +11,11 @@ const ChefCard = ({ chef }) => {
             <p className='mt-2'>experience: {experience}</p>
             <p>Number Of Recipes: {quantity}</p>
             <div className='flex items-center mt-2 mb-2'>
-                <button className='px-6 py-1 rounded-2xl mr-3 flex gap-1 items-center bg-yellow-400 hover:bg-yellow-300 text-white'><FaThumbsUp className='mb-1' />Like</button>
+                <button className='px-6 py-1 rounded-2xl mr-3 flex gap-1 items-center bg-yellow-800 hover:bg-yellow-700 text-white'><FaThumbsUp className='mb-1' />Like</button>
                 <p>5000 Likes</p>
             </div>
             <Link to={`/view/${id}`}>
-                <button className='bg-yellow-400 hover:bg-yellow-300 text-white mt-2 w-full py-3 rounded-lg font-semibold'>View Recipes</button>
+                <button className='bg-yellow-800 hover:bg-yellow-700 text-white mt-2 w-full py-3 rounded-lg font-semibold'>View Recipes</button>
             </Link>
         </div>
     );

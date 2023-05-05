@@ -4,7 +4,7 @@ const Latest = () => {
     return (
         <div className='lg:px-36'>
             <div className='lg:mt-24 mt-10 lg:border rounded-lg border-red-600 p-4'>
-                <h3 className='text-5xl font-semibold text-center'>Latest <span className='text-yellow-400 hover:text-yellow-300'>Recipes</span>
+                <h3 className='text-5xl font-semibold text-center'>Latest <span className='text-yellow-800 hover:text-yellow-700'>Recipes</span>
                 </h3>
                 <h1 className='text-center text-red-700 italic mt-3'>Testy Fy food</h1>
                 <div className='grid mt-10 lg:grid-cols-3 gap-5'>

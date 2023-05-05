@@ -42,7 +42,7 @@ const Error = () => {
                         </p>
                         <Link
                             to='/'
-                            className='px-8 py-3 font-semibold rounded bg-yellow-400 hover:bg-yellow-300 text-white'
+                            className='px-8 py-3 font-semibold rounded bg-yellow-800 hover:bg-yellow-300 text-white'
                         >
                             Back to homepage
                         </Link>
